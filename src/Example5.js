@@ -1,10 +1,12 @@
 import React, { useState , createContext , useContext } from 'react';
+import Counter from './Context/Counter'
+
 const CountContext = createContext()
 
-function Counter(){
-    const count = useContext(CountContext)  //一句话就可以得到count
-    return (<h2>{count}</h2>)
-}
+// function Counter(){
+//     const count = useContext(CountContext)  //一句话就可以得到count
+//     return (<h2>{count}</h2>)
+// }
 
 function Example4(){
     const [ count , setCount ] = useState(0);
@@ -19,3 +21,4 @@ function Example4(){
     )
 }
 export default Example4;
+export const CountContext2 = CountContext
